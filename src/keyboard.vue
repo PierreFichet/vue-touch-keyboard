@@ -100,6 +100,11 @@
 		},
 
 		methods: {
+			registerLayout(name,obj){
+				if(name && isObject(obj)){
+				Layouts[name] = obj
+				}
+			},
 			getLayout() {
 				if (isString(this.layout))
 					return Layouts[this.layout];
